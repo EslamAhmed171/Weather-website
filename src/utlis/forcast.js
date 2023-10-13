@@ -10,7 +10,7 @@ const forcast = (latitude, longitude, callback) =>{
             callback(body.error.info, undefined);
         }
         else{
-            const data = 'it is ' + body.current. weather_descriptions[0] + ', ' +  body.current.temperature + '°C ' + 'and it feels like ' + body.current.feelslike + '°C ' + ' outside.'
+            const data = 'it is ' + body.current. weather_descriptions[0] + ', ' +  body.current.temperature + '°C,' + ' and it feels like ' + body.current.feelslike + '°C ' + ' outside, '+ 'and the humidity is ' + body.current.humidity + '%.' 
             callback(undefined, data)
         }
     })
