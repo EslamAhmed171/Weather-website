@@ -6,7 +6,7 @@ const app = express()
 
 const gecode = require('./utlis/gecode')
 const forcast = require('./utlis/forcast')
-
+const port = process.env.PORT || 3000 
 // Paths
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewPath = path.join(__dirname, '../templates/views')
@@ -84,6 +84,6 @@ app.get('*', (req, res) =>{
     })
 })
 
-app.listen(3000, ()=>{
+app.listen(port, ()=>{
     console.log('Server is running!')
 })
